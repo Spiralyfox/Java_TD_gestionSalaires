@@ -14,6 +14,7 @@ public class Developpeur extends Employe {
         super(nom, prenom, anciennete, poste);
     }
 
+    @Override
     public int getSalaire(){
         return (1900+anciennete*100);
     }
