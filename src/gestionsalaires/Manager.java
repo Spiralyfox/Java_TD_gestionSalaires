@@ -8,23 +8,16 @@ package gestionsalaires;
  *
  * @author maxim
  */
-public class Manager {
-   private String nom;
-   private String prenom;
-   private int anciennete;
-   private String poste;
+public class Manager extends Employe {
 
-    public Manager(String nom, String prenom, int anciennete) {
-        this.poste="manager";
-        this.nom = nom;
-        this.prenom = prenom;
-        this.anciennete = anciennete;
+    public Manager(String nom, String prenom, int anciennete, String poste) {
+        super(nom, prenom, anciennete, poste);
     }
-    
+
     public int getSalaire(){
         return (2200+anciennete*110);
     }
-    
+
     public String getDescription(){
         return nom+" "+prenom+" est "+poste+" depuis "+anciennete+" ans et gagne "+getSalaire()+" €.";
     }
