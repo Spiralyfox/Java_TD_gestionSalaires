@@ -28,6 +28,14 @@ public class GestionSalaires {
         System.out.println(dex.getDescription());
         System.out.println(m.getDescription());
         System.out.println(a.getDescription());
+
+        Service s1 = new Service("Informatique");
+        s1.addEmploye(d1);
+        s1.addEmploye(d2);
+        s1.addEmploye(d3);
+        System.out.println(s1.salaireTotal());
+        s1.getDesc();
+
     }
     
 }
